@@ -1,6 +1,6 @@
 import express from "express";
-import imageRoutes from "./routes/imageRoutes"; // Adjust the path as necessary
-import serviceUsageRoutes from "./routes/serviceUsageRoutes";
+import imageRoutes from "./routes/image.routes"; // Adjust the path as necessary
+import serviceUsageRoutes from "./routes/service-usage.routes";
 
 const app = express();
 const port = process.env.PORT || 3000;
