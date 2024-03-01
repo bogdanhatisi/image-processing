@@ -10,7 +10,7 @@ export const getServiceResponseStatsController = async (
 ) => {
   try {
     const stats = await getServiceResponseStats();
-    res.json();
+    res.json(stats);
   } catch (error) {
     console.error(error);
     res.status(500).send("Failed to retrieve service response stats");
@@ -23,7 +23,7 @@ export const getServiceUsageStatsController = async (
 ) => {
   try {
     const stats = await getServiceUsageStats();
-    res.json();
+    res.json(stats);
   } catch (error) {
     console.error(error);
     res.status(500).send("Failed to retrieve service usage stats");

@@ -1,0 +1,16 @@
+version: "3"
+services:
+  main:
+    container_name: node_app
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/usr/src/app/src
+      - /app/node_modules
+    command: npm run start
+    depends_on:
+      - redis
+  redis:
+    container_name: redis
+    image: redis:6.2.5-alpine
