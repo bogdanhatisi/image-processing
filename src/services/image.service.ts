@@ -42,7 +42,9 @@ export const processImage = async (
   let image = sharp(imagePath);
   if (resolution !== "original") {
     const [width, height] = resolution.toString().split("x").map(Number);
-    image = image.resize(width || undefined, height || undefined);
+    image = image.resize(width || undefined, height || undefined, {
+      fit: "fill",
+    });
   }
 
   await redisClient.incr("cacheMisses");
