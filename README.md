@@ -9,7 +9,7 @@ Before installing and running the dynamic image processing service, ensure you h
 1. **Node.js**: Make sure you have Node.js installed on your system. You can download and install Node.js from the official website: [Node.js Downloads](https://nodejs.org/en/download/).
 2. **npm (Node Package Manager)**: npm comes bundled with Node.js installation. However, ensure that you have npm installed and available in your command-line environment.
 4. **Docker (optional)**: If you plan to use Docker for containerization and deployment, ensure that Docker is installed on your system. You can download and install Docker Desktop from the official website: [Docker Desktop](https://www.docker.com/products/docker-desktop).
-5. **Redis (optional)**: If you plan to run the project using Redis, ensure that Redis is installed and running on your system. You can install Redis via package managers like apt, brew, or by downloading from the official website: [Redis Downloads](https://redis.io/download). Without using docker, you will have to start and connect the Redis client yourself.
+5. **Redis (optional)**: If you plan to run the project using Redis, ensure that Redis is installed and running on your system. You can install Redis via package managers like apt, brew, or by downloading from the official website: [Redis Downloads](https://redis.io/download). Without using docker, you will have to start and connect the Redis server yourself.
 
 
 ### Installing Node.js:
