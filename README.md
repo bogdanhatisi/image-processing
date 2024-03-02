@@ -156,7 +156,7 @@ Before installing and running the dynamic image processing service, ensure you h
      Host: http://localhost:3000
      ```
 
-1b. **Example Response:**
+1b. **Example Response for existing image:**
    - Example HTTP response:
      ```json
      {
@@ -169,6 +169,20 @@ Before installing and running the dynamic image processing service, ensure you h
        }
      }
      ```
+1c. **Example Response for missing image:**
+   - Example HTTP response:
+     ```json
+     {
+       "status": "404 Not Found",
+       "headers": {
+          "Content-Type": "text/html",
+         ...
+       },  
+        "body":{
+         Image not found
+       }
+     }
+     ```     
      
 2a. **Example Request to get usage stats:**
    - Example HTTP request to get the service usage stats:
@@ -195,7 +209,7 @@ Before installing and running the dynamic image processing service, ensure you h
      }
      ```
      
-3a. **Example Request to get usage stats:**
+3a. **Example Request to get response stats:**
    - Example HTTP request to get the service response stats:
      ```http
      GET /stats/response-stats 
