@@ -1,5 +1,5 @@
 import express from "express";
-import imageRoutes from "./routes/image.routes"; // Adjust the path as necessary
+import imageRoutes from "./routes/image.routes";
 import serviceUsageRoutes from "./routes/service-usage.routes";
 
 const app = express();

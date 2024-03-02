@@ -26,14 +26,11 @@ export const getServiceResponseStats = async () => {
 };
 
 export const getServiceUsageStats = async () => {
-  // Total number of original image files
   const totalImages = fs.readdirSync(IMAGES_DIR).length;
 
-  // Count of images that have been resized
   const imagesResizedCount =
     (await redisClient.get("imagesResizedCount")) || "0";
 
-  // Cache hit-and-miss ratios
   const cacheHits = (await redisClient.get("cacheHits")) || "0";
   const cacheMisses = (await redisClient.get("cacheMisses")) || "0";
   const totalCacheAccesses = parseInt(cacheHits) + parseInt(cacheMisses);
