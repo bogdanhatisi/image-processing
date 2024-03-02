@@ -59,7 +59,9 @@ describe("processImage", () => {
 
     expect(redisClient.get).toHaveBeenCalledWith(mockCacheKey);
     expect(mockedSharp).toHaveBeenCalledWith(mockPath);
-    expect(mockedSharp().resize).toHaveBeenCalledWith(800, 600);
+    expect(mockedSharp().resize).toHaveBeenCalledWith(800, 600, {
+      fit: "fill",
+    });
     expect(result).toEqual(mockImageBuffer);
     expect(redisClient.set).toHaveBeenCalledWith(
       mockCacheKey,
